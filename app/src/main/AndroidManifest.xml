@@ -22,14 +22,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".ClassActivity" />
-        <activity
-            android:name=".AdminActivity"
-            android:label="@string/title_activity_admin"
-            android:parentActivityName=".LoginActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.shivakanth.classmate.LoginActivity" />
-        </activity>
         <activity android:name=".LActivity"></activity>
     </application>
 
