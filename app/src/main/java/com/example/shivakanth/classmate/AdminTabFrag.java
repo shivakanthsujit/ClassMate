@@ -10,6 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,6 +38,7 @@ public class AdminTabFrag extends Fragment {
         position = getArguments().getInt("pos");
 
         createDummyClass();
+        testf();
     }
 
     @Override
@@ -72,5 +76,13 @@ public class AdminTabFrag extends Fragment {
         Class f = new Class("Numerical Methods","MAIR43","Dr. S. Narayanan","10:30am","11:20am");
         CList.add(f);
         */
+    }
+
+    void testf()
+    {
+        Class e = new Class("Signals and Systems","ICPC18","Dr. S. Narayanan","10:30am","11:20am");
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference dRef = database.getReference();
+        dRef.child("tt").child("fri").child("4").setValue(e);
     }
 }
