@@ -15,7 +15,27 @@ public class Class {
         this.stime = stime;
         this.etime = etime;
     }
-    
+
+    public Class(tempClass tempClass, String a[])
+    {
+        this.name = tempClass.getName();
+        this.code = tempClass.getCode();
+        this.prof = tempClass.getProf();
+        this.stime = a[0];
+        this.etime = a[1];
+    }
+
+    public void changeDets(tempClass tempClass)
+    {
+        this.name = tempClass.getName();
+        this.code = tempClass.getCode();
+        this.prof = tempClass.getProf();
+    }
+    public void setTime(String s, String e)
+    {
+        this.stime = s;
+        this.etime = e;
+    }
     public String getName() {
         return name;
     }
