@@ -64,6 +64,7 @@ public class TabFragment extends Fragment {
 
         mAdapter = new ClassAdapter(CList);
         recyclerView.setAdapter(mAdapter);
+        mAdapter.notifyDataSetChanged();
 
 
 
@@ -72,16 +73,6 @@ public class TabFragment extends Fragment {
     {
         Class c = new Class("Analog Signal Processing","ICPC16","Dr. S. Narayanan","10:30am","11:20am");
         CList.add(c);
-
-        /*Class d = new Class("Industrial Instrumentation","ICPC17","Dr. S. Narayanan","10:30am","11:20am");
-        CList.add(d);
-
-        Class e = new Class("Signals and Systems","ICPC18","Dr. S. Narayanan","10:30am","11:20am");
-        CList.add(e);
-
-        Class f = new Class("Numerical Methods","MAIR43","Dr. S. Narayanan","10:30am","11:20am");
-        CList.add(f);
-        */
     }
 
     void loadClass()
@@ -95,3 +86,4 @@ public class TabFragment extends Fragment {
 
 
 }
+

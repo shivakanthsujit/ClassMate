@@ -20,12 +20,13 @@ public class ClassActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.test);
 
-        viewPager = (ViewPager) findViewById(R.id.viewpager);
+        viewPager = findViewById(R.id.viewpager);
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(adapter);
 
-        tabLayout = (TabLayout) findViewById(R.id.tabs);
+        tabLayout = findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
 
     }
+    
 }

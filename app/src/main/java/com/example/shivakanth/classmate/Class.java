@@ -56,3 +56,4 @@ public class Class {
         this.prof = prof;
     }
 }
+
